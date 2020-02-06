@@ -1,0 +1,34 @@
+body, html {
+    font-size: 12px;
+    font-family: 'Noto Sans', sans-serif;
+    height: 100%;
+}
+
+.coverBg {
+    background-image: url("../img/full_beach.jpg");
+    height: 100%;
+    opacity: 0.80;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.caption span {
+    background-color: #111;
+    color: #fff;
+    border: 0px;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    line-height: 80px;
+}
