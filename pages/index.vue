@@ -3,7 +3,12 @@
         <div class="bg"></div>
         <div class="caption">
             <span class="text-bg">&gt; Dave Smith<span class="blinking-cursor">_</span> </span> <br>
-            <span class="small-text text-bg"><img class="icon" src="~assets/images/email.png"> <a href="mailto:hello@davesmith.work">hello@davesmith.work</a> <img class="icon" src="~assets/images/twitter.png"> <a href="https://twitter.com/_Dave_Smith">@_dave_smith</a></span class="bg">
+            <span class="small-text text-bg">
+                <a href="mailto:hello@davesmith.work"><img class="icon" src="~assets/images/email.png"></a>
+                <a class="hide-sm" href="mailto:hello@davesmith.work">hello@davesmith.work</a>
+                <a href="https://twitter.com/_Dave_Smith"><img class="icon" src="~assets/images/twitter.png"></a>
+                <a class="hide-sm" href="https://twitter.com/_Dave_Smith">@_dave_smith</a>
+            </span>
         </div>
     </div>
 </template>
@@ -110,10 +115,10 @@ a:hover {
   background-color: #111;
   color: #fff;
   border: 0px;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-  line-height: 80px;
+  padding: 17px;
+  font-size: 18px;
+  letter-spacing: 6px;
+  line-height: 60px;
 }
 
 .caption .small-text {
@@ -121,8 +126,29 @@ a:hover {
     font-size: 15px;
 }
 
-.icon {
-    width: 20px;
+.hide-sm {
+    display: none;
+}
+
+@media screen and (min-width: 762px) {
+    .text-bg {
+        padding: 18px;
+        font-size: 25px;
+        letter-spacing: 10px;
+        line-height: 80px;
+    }
+    .hide-sm {
+        display: inline;
+    }
+    .icon {
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 761px) {
+    .icon {
+        width: 25px;
+    }
 }
 
 .blinking-cursor {
