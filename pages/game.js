@@ -32,7 +32,7 @@ export const gameLevels = [
     name: 'UPSTAIRS HALLWAY',
     story:
       'You are in the hallway, outside your bedroom which is to your WEST. The decor is a bit old, you should probably consider painting sometime. To your NORTH are the stairs down. SOUTH is the spare room.',
-    north: 10000,
+    north: 10004,
     south: 10002,
     west: 1,
     collectors: []
@@ -77,6 +77,40 @@ export const gameLevels = [
         story:
           "The television looks to be a really old black and white set from the early 1990s. You don't recall where this came from but it probably doesn't work anymore",
         result: {}
+      }
+    ],
+    collectors: [],
+    actions: []
+  },
+  
+    // Downstairs Hallway
+  {
+    id: 10004,
+    name: 'DOWNSTAIRS HALLWAY',
+    story:
+      'You are in the hall at the bottom of the stairs. Again, you notice it could probably do with a splash of paint in the walls. You can go SOUTH up the stairs. There are doors to your EAST and WEST. To the NORTH is the front door leading out onto the street.',
+    south: 10001,
+    east: 10005,
+    inspections: [
+    ],
+    collectors: [],
+    actions: []
+  },
+      // Downstairs Hallway
+  {
+    id: 10005,
+    name: 'KITCHEN',
+    story:
+      'This is the kitchen. It\'s small but has ample space for your needs. There is some unopened post on the table. The washing machine in the corner is rattling away. The door to the WEST leads to the hallway. A door to the EAST leads to the rear yard.',
+    west: 10004,
+    east: 'The back door seems firmly locked.',
+    inspections: [
+      {
+        
+        item: 'WASHING MACHINE',
+          story:
+          'Looking at the water sloshing around in the machine, there looks to be a red tinge to it. Which is a bit odd.',
+          result: {}
       }
     ],
     collectors: [],
